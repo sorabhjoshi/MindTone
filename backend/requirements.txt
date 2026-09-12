@@ -1,13 +1,14 @@
 fastapi>=0.110
 uvicorn[standard]>=0.27
 python-multipart>=0.0.9
+# CPU-only torch wheels are installed separately below (skips bundling
+# unused CUDA runtime libraries — meaningfully smaller memory footprint,
+# which matters on free-tier hosts with tight RAM limits).
 sqlalchemy>=2.0
 bcrypt>=4.1
 pyjwt>=2.8
 pydantic[email]>=2.5
 pandas>=2.0
-torch>=2.1
-torchaudio>=2.1
 soundfile>=0.12
 transformers>=4.35
 scikit-learn>=1.3
