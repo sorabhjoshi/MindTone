@@ -1,0 +1,21 @@
+streamlit>=1.38
+altair>=5.0
+sqlalchemy>=2.0
+bcrypt>=4.1
+pandas>=2.0
+# NOT pinned: Streamlit Cloud's Python version determines which torch/
+# torchaudio builds are even available (e.g. Python 3.14 only has
+# torch>=2.9), so pinning an old version can make installation fail
+# outright. torchaudio>=2.9 also dropped its built-in audio-decode
+# backend (requires a separate torchcodec package) — but this app never
+# calls torchaudio.load() directly; ser_pipeline/data/audio.py reads
+# audio via soundfile instead, which sidesteps that issue regardless of
+# torchaudio's version.
+torch>=2.1
+torchaudio>=2.1
+soundfile>=0.12
+transformers>=4.35
+scikit-learn>=1.3
+numpy>=1.24
+psycopg2-binary>=2.9
+python-dotenv>=1.0

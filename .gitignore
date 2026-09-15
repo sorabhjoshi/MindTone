@@ -1,0 +1,7 @@
+.env
+model_data/
+mental_health_tracker.db
+mh_tracker.db
+__pycache__/
+*.pyc
+.streamlit/secrets.toml
